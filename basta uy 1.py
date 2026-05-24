@@ -1,8 +1,0 @@
-FILENAME = "students.txt"
-
-try:
-    with open(FILENAME, "x"):
-        print("Student file created!")
-except FileExistsError:
-    print("Student file already exists!")
-
