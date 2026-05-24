@@ -1,4 +1,4 @@
-FILENAME = "students.txt"
+FILENAME = "students.py"
 
 try:
     with open(FILENAME, "x"):
