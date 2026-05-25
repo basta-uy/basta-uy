@@ -15,3 +15,24 @@ def add_student():
         file.write(f"{student_id},{name},{course}\n")
 
     print("Student added successfully!")
+
+def view_students():
+    try:
+        with open(FILENAME, "r") as file:
+            students = file.readlines()
+
+            if len(students) == 0:
+                print("No student records found.")
+            else:
+                print("\n--- Student Records ---")
+
+                for student in students:
+                    student_id, name, course = student.strip().split(",")
+
+                    print("ID:", student_id)
+                    print("Name:", name)
+                    print("Course:", course)
+                    print("------------------")
+
+    except FileNotFoundError:
+        print("File not found.") 
